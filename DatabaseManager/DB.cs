@@ -36,7 +36,7 @@ namespace DatabaseManager
         public DbSet<Order> Orders { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite(@"Filename=C:\Users\Benni\AppData\Local\Packages\3675ce31-dee5-4327-852b-c3b5e20b0e36_yf96qsp131524\LocalCache\Foo.db", x => x.SuppressForeignKeyEnforcement());
+            optionsBuilder.UseSqlite(@"Filename=..\LocalCache\Foo.db", x => x.SuppressForeignKeyEnforcement());
         }
         public static void Lock()
         {
